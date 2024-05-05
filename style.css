@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+}
+
+:root{
+    --StrongCyan: hsl(172, 67%, 45%);
+    --VeryDarkCyan: hsl(183, 100%, 15%);
+--DarkGrayishCyan: hsl(186, 14%, 43%);
+--GrayishCyan: hsl(184, 14%, 56%);
+--LightGrayishCyan: hsl(185, 41%, 84%);
+--VeryLightGrayishCyan: hsl(189, 41%, 97%);
+--White: hsl(0, 0%, 100%);
+}
+
+body{
+    background: var(--LightGrayishCyan);
+}
+
+.splitter{
+    width: 4%;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 7%;
+}
+
+.splitter > h3{
+    color: var(--VeryDarkCyan);
+    letter-spacing: .3rem;
+}
+
+.container{
+    width: 50%;
+    border-radius: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    background: var(--White);
+    /* height: 10rem; */
+    padding: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    gap: 0.5rem;
+}
+
+.left, .right{
+    flex: 1;
+}
+
+.left{
+    padding: 1.2rem;
+    background-color: var(--White);
+}
+
+.bill-input{
+    flex: 1;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.bill-input > input{
+    width: 100%;
+    height: 3rem;
+    background: var(--VeryLightGrayishCyan);
+    border-radius: 0.3rem;
+    padding-right: 0.7rem;
+    border: none;
+    font-size: 24px;
+    text-align: right;
+    outline: none;
+    /* background-image: url("./images/icon-dollar.svg");
+    background-repeat: no-repeat; */
+}
+
+i{
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 5px;
+}
+
+.bill-input > input:focus{
+    border: 0.25rem solid var(--StrongCyan);
+}
+
+.bill-input > label{
+    display: block;
+    color: var(--DarkGrayishCyan);
+    margin-bottom: .4rem;
+}
+
+.tip-input{
+    flex: 1;
+    margin-bottom: 2rem;
+}
+
+.tip-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.tip-button > button{
+    width: 30%;
+    margin-bottom: 0.8rem;
+    background: var(--VeryDarkCyan);
+    color: var(--White);
+    height: 3.2rem;
+    align-items: center;
+    border-radius: 0.3rem;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.tip-button > button:hover{
+    background: var(--StrongCyan);
+    color: var(--VeryDarkCyan);  
+    font-weight: 700;
+}
+
+.tip-button > .custom-input{
+    width: 30%;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+    font-size: 16px;
+    align-items: center;
+    border-radius: 0.3rem;
+    font-size: 18px;
+}
+
+.tip-button > .custom-input:focus{
+    text-align: right;
+    padding-right: 1rem;
+    border: 0.2rem solid var(--StrongCyan);
+    outline: none;
+}
+
+.tip-button > .custom-input::placeholder{
+    text-align: center;
+}
+
+.tip-input > label{
+    display: block;
+    color: var(--DarkGrayishCyan);
+    margin-bottom: .4rem;
+}
+
+.number-input{
+    flex: 1;
+}
+
+.number-input > input{
+    width: 100%;
+    height: 3rem;
+    background: var(--VeryLightGrayishCyan);
+    border-radius: 0.3rem;
+    padding-right: 0.7rem;
+    border: none;
+    font-size: 24px;
+    text-align: right;
+    outline: none;
+}
+
+.number-input > input:focus{
+    border: .2rem solid var(--StrongCyan);
+}
+
+.number-input > label{
+    display: block;
+    color: var(--DarkGrayishCyan);
+    margin-bottom: .4rem;
+}
+
+.right{
+    padding: 2.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background: var(--VeryDarkCyan);
+    border-radius: 1rem;
+    border: none;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.amount-div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10%;
+    margin-top: 4%;
+    align-items: center;
+    color: var(--White);
+}
+
+.total-div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+    margin-bottom: 20%;
+    align-items: center;
+    color: var(--White);
+}
+
+.right > button{
+    width: 100%;
+    height: 2.8rem;
+    background: var(--LightGrayishCyan);
+    color: var(--VeryDarkCyan);
+    font-weight: 700;
+    border-radius: 0.5rem;
+    border: none;
+    margin-top: 20%;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.right > button:hover{
+    background-color: var(--StrongCyan);
+    color: var(--VeryDarkCyan);
+}
+
+span{
+    font-size: 12px;
+    color: var(--LightGrayishCyan);
+}
+
+h1{
+    font-size: 30px;
+    color: var(--StrongCyan);
+}
+
+@media(max-width: 480px) {
+    h3{
+        font-size: 24px;
+    }
+
+    .splitter{
+        width: 10%;
+    }
+    .container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tip-button > button{
+        width: 47%;
+    }
+
+    .right > button{
+        margin-top: 0.5%;
+        height: 3.4rem;
+        font-size: 22px;
+    }
+
+    .tip-button > .custom-input{
+        width: 47%;
+    }
+}
